@@ -1,0 +1,211 @@
+<%- include('../layout/header') %>
+<%- include('../layout/side') %>
+
+   <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">General Form</li>
+            </ol>
+          </div>
+        </div>
+     
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <!-- left column -->
+          <div class="col-md-12">
+            <!-- general form elements -->
+            <div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">Request Details</h3>
+              </div>
+
+        
+        <form role="form" action="/admin/profile" method="post">
+
+        <div class="panel panel-default">
+            <div class="panel-heading"><center><h2>DETAILS OF MEMBER</h2></center>
+                
+            </div>
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered table-hover">
+                     
+                        <tbody>
+                          <% if (data && data.req_details){
+                            var i=0;
+                          %>
+                             
+
+                             <tr>
+                                <td>  First Name : </td> 
+                                <td> <%= data.req_details[i].first_name%> </td> 
+                              </tr> 
+
+                              <tr>
+                                <td>  Last Name : </td> 
+                                <td> <%= data.req_details[i].last_name%> </td> 
+                              </tr>  
+      
+                              <tr>
+                                <td>Address : </td> 
+                                <td> <%= data.req_details[i].address%> </td>
+                              </tr>               
+
+                              <tr>
+                                <td>  Phone : </td> 
+                                <td> <%= data.req_details[i].pno%> </td> 
+                              </tr> 
+
+                              <tr>
+                                <td>  Date of Birth : </td> 
+                                <td> <%= data.req_details[i].dob%> </td> 
+                              </tr>  
+                              
+                              <tr>
+                                <td>  Ward : </td> 
+                                <td> <%= data.req_details[i].ward%> </td> 
+                              </tr>
+
+                              <tr>
+                                <td>  Panchayath : </td> 
+                                <td> <%= data.req_details[i].pan%> </td> 
+                              </tr> 
+
+                              <tr>
+                                <td>  Taluk : </td> 
+                                <td> <%= data.req_details[i].taluk%> </td> 
+                              </tr>  
+
+                              <tr>
+                                <td>  District : </td> 
+                                <td> <%= data.req_details[i].dis%> </td> 
+                              </tr> 
+
+                              <tr>
+                                <td>  State : </td> 
+                                <td> <%= data.req_details[i].state%> </td> 
+                              </tr>  
+
+                              <tr>
+                                <td>  Account Number : </td> 
+                                <td> <%= data.req_details[i].bankno%> </td> 
+                              </tr>  
+
+                              <tr>
+                                <td>  IFSC code : </td> 
+                                <td> <%= data.req_details[i].bankifsc%> </td> 
+                              </tr>  
+                           
+                            
+
+                              <tr>
+                                <td>  Photo Documents : </td> 
+                                <td>  <input type="file" class="form-control" name="image" multiple> </td> 
+                              </tr>
+
+                              
+                              <tr>
+                                <td>  Bank holder name : </td> 
+                                <td> <%= data.req_details[i].bankholdername%> </td> 
+                              </tr> 
+                              <input type="hidden"  id="r_id" name="r_id" value="<%= data.req_details[i].r_id%>">
+                              <tr>
+                                <td>   </td> 
+                                <td> <button type="submit" class="btn btn-primary">Approve</button></td> 
+                              </tr>  
+ 
+                           <tr>
+                           <td>Photos</td>
+                           <td>
+                               
+                           <style>
+                            
+                            #container{ width: auto; margin: 0 auto;}
+                            .imgggg{ width:100%; float:left;}
+                            .imghh{width:100%; float:left; }
+                             img{width:32%; padding:10px;}
+
+                              @media screen and (max-width: 480px){
+                              #container{ width: 100%; padding: 20px ; }
+                                .imgggg{ width:100%; float:left;}
+                                .imghh{width:100%; float:left; }
+                                img{width:100%; padding:10px;}
+                              }
+                          </style>
+                           <div id="containerr">
+                            <div id="page_body">
+                            <div class="imgggg" >
+                           
+                           
+                                  <% if (data_photo && data_photo.req_photo){%>
+                                <% for(var i = 0; i < data_photo.req_photo.length; i++){%>
+                               
+                                <img src="/helpPhoto/<%= data_photo.req_photo[i].image%>">  
+                                 <%}%>
+                            <%}%>
+                           
+                                </div>
+                              </div>
+                           </div>
+                           </td>
+                              </tr> 
+                          
+                          <%}%>
+                            
+                        </tbody>
+                    </table>
+                    </form>
+                   <INPUT TYPE="button" VALUE="Back" onClick="history.back()" a href="admin/request" >
+                </div>
+                <!-- /.table-responsive -->
+            </div>
+            <!-- /.panel-body -->
+        </div>
+    </div>
+</div>
+            <!-- /.card -->
+
+            <!-- Form Element sizes -->
+            
+            <!-- /.card -->
+
+            
+            <!-- /.card -->
+
+            <!-- Input addon -->
+       
+            <!-- /.card -->
+            <!-- Horizontal Form -->
+          
+            <!-- /.card -->
+
+          </div>
+          <!--/.col (left) -->
+          <!-- right column -->
+         
+          <!--/.col (right) -->
+        </div>
+        <!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+
+   </div><!-- /.container-fluid -->
+    </section>
+
+ 
+  <%- include('../layout/footer') %>

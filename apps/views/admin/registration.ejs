@@ -1,0 +1,204 @@
+    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>signup</title>
+</head>
+<body>
+    <div class="container">    
+        <div id="signupbox" style=" margin-top:50px" class="mainbox col-md-8 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <div class="panel-title">Sign Up</div>
+                        </div>  
+                        <div class="panel-body" >
+              <form role="form" action="/registration" method="post">
+                
+                
+
+
+                    <div class="card-body">
+  
+
+                  <div class="form-group">
+                  <label class="col-sm-2 col-sm-2 control-label">first name</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="first_name">
+                  </div>
+                  </div
+                  <div class="form-group">
+                  <label class="col-sm-2 col-sm-2 control-label">Last name</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="last_name">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-2 col-sm-2 control-label">Gender</label>
+                  <div class="col-sm-20">
+                    <input type="radio" name="gender" value="Male">Male 
+                    <input type="radio" name="gender" value="Female">Female 
+                    <input type="radio" name="gender" value="Others">Others 
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-2 col-sm-2 control-label">Address</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="address">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-2 col-sm-2 control-label">DOB</label>
+                  <div class="col-sm-10">
+                    <input type="date" name="dob" >
+                  </div>
+               </div>
+
+               <div class="form-group">
+                  <label class="col-sm-2 col-sm-2 control-label">Phone Number</label>
+                  <div class="col-sm-10">
+                    <input type="number" class="form-control" name="pno">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-2 col-sm-2 control-label">Email ID</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="email">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-5 col-sm-5 control-label">ward</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="ward">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-5 col-sm-5 control-label">Panchayath</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="pan">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-5 col-sm-5 control-label">Taluk</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="taluk">
+                  </div>
+                </div>
+
+
+                <div class="form-group">
+                  <label class="col-sm-5 col-sm-5 control-label">District</label>
+                  <div class="col-sm-10">
+                    
+                        <select id="districts" name="dis">
+
+                          <option value="1">Kasargod</option>
+                          <option value="2">Kannur</option>
+                          <option value="3">Calicut</option>
+                          <option value="4">Wayanad</option>
+                          <option value="5">Palakad</option>
+                          <option value="6">Malapuram</option>
+                          <option value="7">Thrissur</option>
+                          <option value="8">Ernakulam</option>
+                          <option value="9">Idukki</option>
+                          <option value="10">Kottayam</option>
+                          <option value="11">Alapuzha</option>
+                          <option value="12">Kollam</option>
+                          <option value="13">Pathanamthitta</option>
+                          <option value="14">Trivandrum</option>
+                         
+                         </select>
+                    
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-5 col-sm-5 control-label">State</label>
+                  <div class="col-sm-10">
+                    
+                        <select id="state" name="state">
+
+                          <option value="1">kerala</option>
+                          <option value="2">TN</option>
+                          <option value="3">Karnataka</option>
+                          <option value="4">AP</option>
+                          <option value="5">Maharashtra</option>
+                          <option value="6">Goa</option>
+                          <option value="7">Punjab</option>
+                          <option value="8">Rajasthan</option>
+                          
+                         
+                         </select>
+                    
+                  </div>
+                </div>
+                
+                <div class="form-group">
+                  <label class="col-sm-5 col-sm-5 control-label">Pincode</label>
+                  <div class="col-sm-10">
+                    <input type="number" class="form-control" name="pin">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-5 col-sm-5 control-label">Bank Account Number</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="bankno">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-5 col-sm-5 control-label">Bank Account Holder Name</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="bankholdername">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-5 col-sm-5 control-label">IFSC CODE</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="bankifsc">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-5 col-sm-5 control-label">Branch details</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="bankdetails">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-5 col-sm-5 control-label">Password</label>
+                  <div class="col-sm-10">
+                    <input type="password" class="form-control" name="password">
+                  </div>
+                </div>
+
+                  
+                </div>
+
+                <div class="card-footer">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+              </form>
+        
+    </div>
+                    </div>
+             </div> 
+    </div>
+</body>
+</html>
+
+
+
+  
+

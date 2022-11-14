@@ -1,0 +1,208 @@
+<!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="index3.html" class="brand-link">
+      <img src="/admin/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+           style="opacity: .8">
+      <span class="brand-text font-weight-light">MISSION JP4</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+         
+
+         
+                  <% if (locals.admin.user_type=='cl'){ %>
+            <li class="nav-item has-treeview menu-open">
+            <a href="#" class="nav-link active">
+              <i class="nav-icon fas fa-edit"></i>
+              <p>
+               REGISTRATION
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+             <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="/admin/registration" class="nav-link ">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Register Samithi </p>
+                </a>
+             </li>  
+            </ul>
+          </li>
+
+           <% }  %>
+
+
+           <% if (locals.admin.user_type=='cl'){ %>
+
+          <li class="nav-item has-treeview menu-open">
+            <a href="request" class="nav-link active">
+              <i class="nav-icon fas fa-edit"></i>
+              <p>
+               Requests
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+             
+              <ul class="nav nav-treeview">
+             
+              <!--
+              <li class="nav-item">
+                <a href="/admin/ver_request" class="nav-link ">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Verified Requests</p>
+                </a>
+             </li>
+             -->
+              <li class="nav-item">
+                <a href="/admin/admin_ver_request" class="nav-link ">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Requests for Alotment</p>
+                </a>
+             </li>
+              
+            </ul>
+            <ul class="nav nav-treeview">
+            
+              <li class="nav-item">
+                <a href="/admin/unver_request" class="nav-link ">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Non-Verified Requests
+                </p>
+                </a>
+             </li>
+              <li class="nav-item">
+                <a href="/admin/paid_slip" class="nav-link ">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Fund Transfer Statement</p>
+                </a>
+             </li>
+              <li class="nav-item">
+                <a href="/admin/non_paid_shared_request" class="nav-link ">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Non Paid Requests</p>
+                </a>
+             </li>
+             <li class="nav-item">
+                <a href="/admin/request_history" class="nav-link ">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Requests History(All) </p>
+                </a>
+             </li>
+             
+            </ul>
+          </li>
+ <% }else{  %>
+        <li class="nav-item has-treeview menu-open">
+            <a href="request" class="nav-link active">
+              <i class="nav-icon fas fa-edit"></i>
+              <p>
+               Samithi Requests
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+             
+              <ul class="nav nav-treeview">
+
+              <li class="nav-item">
+                <a href="/admin/member_add" class="nav-link ">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Add Member</p>
+                </a>
+             </li>
+
+             <li class="nav-item">
+                <a href="/admin/add_fund" class="nav-link ">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Add Fund</p>
+                </a>
+             </li>
+
+             
+             <li class="nav-item">
+                <a href="/admin/fund_statement" class="nav-link ">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Fund Statement</p>
+                </a>
+             </li>
+
+             <li class="nav-item">
+                <a href="/admin/view_members" class="nav-link ">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>View Member</p>
+                </a>
+             </li>
+             
+<!--
+              <li class="nav-item">
+                <a href="/admin/fam_mem_registration" class="nav-link ">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Add Family Member</p>
+                </a>
+             </li>
+-->
+              <li class="nav-item">
+                <a href="/admin/samithi_request" class="nav-link ">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Add Requests</p>
+                </a>
+             </li>
+             <li class="nav-item">
+                <a href="/admin/samithi_request_added" class="nav-link ">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>List Own Requests</p>
+                </a>
+             </li>
+          <li class="nav-item">
+                <a href="/admin/shared_request" class="nav-link ">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>New Fund Requests</p>
+                </a>
+             </li>
+             <!--
+              <li class="nav-item">
+                <a href="/admin/paid_shared_request" class="nav-link ">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Paid Fund Requests</p>
+                </a>
+             </li>
+             -->
+               <li class="nav-item">
+                <a href="/admin/payed" class="nav-link ">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Fund Transfer Statement</p>
+                </a>
+             </li>
+
+             
+             
+              
+            </ul>
+           
+          </li>
+          <% } %>
+         
+         
+          <li class="nav-item has-treeview">
+           <a href="/" class="nav-link ">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Logout</p>
+                </a>
+            
+          </li>
+            
+
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>

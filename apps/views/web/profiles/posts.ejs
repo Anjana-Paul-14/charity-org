@@ -1,0 +1,68 @@
+
+ <%- include('../partials/header') %> 
+
+<section>
+              <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1><center>Fund Transfer Intimation </center></h1>
+          </div>
+          
+        </div>
+  
+                
+            <div class="col-sm-10"> 
+              
+              <form role="form" action="/fund_statement" method="post" enctype="multipart/form-data">
+                
+                
+                
+
+                 <input type="hidden" class="form-control" name="r_id" value="<%= myVar %>">
+              	<div class="form-group">
+                  <label class="col-sm-2 col-sm-2 control-label">Name</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="first_name">
+                  </div>
+                  </div>
+
+
+                  <div class="form-group">
+                  <label class="col-sm-2 col-sm-2 control-label">Request</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="request">
+                  </div>
+                  </div>
+                  
+                  <div class="form-group">
+                  <label class="col-sm-2 col-sm-2 control-label">Amount Paid</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="amt">
+                  </div>
+                  </div>
+
+                  <div class="form-group">
+                  <label class="col-sm-2 col-sm-2 control-label">Date</label>
+                  <div class="col-sm-10">
+                    <input type="date" class="form-control" name="paid_date">
+                  </div>
+                  </div>
+
+                  <div class="form-group">
+                  <label class="col-sm-2 col-sm-2 control-label">Fund Transfer Proof</label>
+                  <div class="col-sm-10">
+                    <input type="file" class="form-control" name="image">
+                  </div>
+                  </div>
+
+                
+
+                <div class="card-footer">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <INPUT TYPE="button" VALUE="Back" onClick="history.back()" a href="req_received" >
+                </div>
+              </form>
+        
+    </section>
+
+
+ <%- include('../partials/footer'); -%> 

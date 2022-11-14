@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<%- include('../partials/header'); -%>
+<main>
+<div class="main-section">
+<div class="container">
+<div class="main-section-data">
+<div class="row">
+<%- include('../partials/leftside'); -%>
+
+  <script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>    
+     <script type="text/javascript">
+
+    $( document ).ready(function() {
+      $("#bidnow").on('click', function(){ 
+     
+     // var pid =$(this).attr("data-id");
+ //var cname = $('#cname').val();
+var bidamt = parseInt($('#bidamt').val());
+var orgprice = parseInt($('#orgprice').val());
+var bidid = parseInt($('#bidid').val());
+var pid = parseInt($('#bidid').val());
+var uid = parseInt($('#uid').val());
+
+if ( bidamt < orgprice) {
+              alert('Bid Amount should greater than Product Price');
+            
+            }else{
+     $.ajax({ 
+           url: '/savebid',
+           type: 'POST',
+           cache: false, 
+           data: { bamt: bidamt,pid:pid,bid_id:bidid,uid:uid }, 
+           success: function(data){
+              alert('Successfully Bidding Completed');
+        //delay(1000);
+        window.location.reload('/');
+             
+           }
+           , error: function(jqXHR, textStatus, err){
+               alert('text status '+textStatus+', err '+err)
+           }
+        })
+ }
+     });  
+
+      });            
+
+</script>
+
+
+<div class="col-lg-6 col-md-8 no-pd">
+<div class="main-ws-sec">
+<div class="post-topbar">
+ 
+              
+             <!-- <form role="form" action="/req_new" method="post" enctype="multipart/form-data">
+                
+                <div class="form-group">
+                  <label class="col-sm-4 col-sm-4 control-label">Request Form</label>
+                  
+                </div>
+               
+                <div class="form-group">
+                  <label class="col-sm-2 col-sm-2 control-label">TITLE</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="title">
+                  </div>
+                </div>
+                
+                  <div class="form-group">
+                  <label class="col-sm-2 col-sm-2 control-label">REQUESTS</label>
+                  <div class="col-sm-10">
+                    <input type="textarea" class="form-control" name="need">
+                  </div>
+                  </div>
+                  
+                   <div class="form-group">
+                  <label class="col-sm-2 col-sm-2 control-label">PHOTO</label>
+                  <div class="col-sm-10">
+                    <input type="file" class="form-control" name="image" multiple>
+                  </div>
+                  </div>
+                
+
+                <div class="card-footer">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+              </form>-->
+        
+<div class="post-st">
+<ul>
+  <!--
+<li><a class="" href="/posts" title="">Post the images</a></li> 
+-->
+<li><a class="" href="/fam_reg" title="">Register family members</a></li>
+</ul>
+
+</div>
+</div>
+<div class="posts-section">
+<div class="post-bar">
+
+
+<div class="job_descp">
+
+<% if(locals.user){
+%>
+<h2> <center> WELCOME <%- user.first_name %></center> </h2>
+
+<% } %>
+
+<!--
+ 
+                    <table class="table table-striped table-bordered table-hover">
+                        <thead>
+                            <tr>
+                               
+                                <th>request</th>
+                                <th>image</th>
+                               
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% if (rdata && rdata.requests_data){%>
+                                <% for(var i = 0; i < rdata.requests_data.length; i++){%>
+                                <tr>
+                                    <td style="word-wrap: break-word;"> <%= rdata.requests_data[i].need%> </td>
+                                    <td> <img src="../helpPhoto/<%= rdata.requests_data[i].image%>" style="max-width:300px"> </td>
+                                      
+                                </tr>
+                                <%}%>
+                            <%}%>
+                        </tbody>
+                    </table>
+    -->
+
+
+</div>
+
+</div>
+
+
+
+
+</div>
+</div>
+</div>
+<div class="col-lg-3 pd-right-none no-pd">
+<div class="right-sidebar">
+
+<div class="widget widget-jobs">
+<div class="sd-title">
+<h3>REQUESTS</h3>
+</div>
+<div class="jobs-list">
+ 
+                          <!--  <% if (rdata.requests_data){%>
+                               <% for(var i = 0; i < rdata.requests_data.length; i++){%>-->
+
+<div class="job-info"><!--<%=  rdata.requests_data[i].need %> -->
+<div class="job-details">
+   
+<!--<h3><%= i+1 %></h3>-->
+<p>..</p>
+</div>
+<div class="hr-rate">
+<span>..</span>
+</div>
+</div>
+ <!--<%}%>
+<%}%>-->
+<p><a href="req_received" title="">View more requests</a></p>
+</div>
+  
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+
+
+

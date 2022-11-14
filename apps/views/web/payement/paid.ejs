@@ -1,0 +1,71 @@
+
+ <%- include('../partials/header') %> 
+
+ <section>
+    <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1><center>AMOUNT PAID</center></h1>
+          </div>
+          
+    </div>
+  
+                
+             
+              
+              <form role="form" action="/payed" method="post">
+                
+                
+
+        <div class="panel panel-default">
+            
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered table-hover">
+                        <thead>
+                            <tr>
+                               
+                               
+                                
+                                <th>Beneficiary name</th>
+                                <th>Amount Paid</th>
+                                <th>Reason</th>
+                                <th>Date</th>
+                                
+                               
+                                
+                                
+                            </tr>
+                        </thead>
+                         <tbody>
+                            <% if (data && data.paid){%>
+                                <% for(var i = 0; i < data.paid.length; i++){%>
+                                <tr>
+                                    <td> <%= data.paid[i].first_name%> </td>
+                                    
+                                    
+
+                                    <td> <%= data.paid[i].amt%> </td>
+                                    <td> <%= data.paid[i].title%> </td>
+
+                                    <td> <%= data.paid[i].paid_date%> </td>
+                                </tr>
+                                <%}%>
+                            <%}%>
+                            
+                        </tbody>
+                    </table>
+                     
+                </div>
+                <!-- /.table-responsive -->
+            </div>
+            <!-- /.panel-body -->
+        </div>
+    
+                
+
+         
+         </form>
+        
+    </section>
+

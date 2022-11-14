@@ -1,0 +1,63 @@
+<%- include('../partials/header'); -%>
+
+
+<main>
+<div class="main-section">
+<div class="container">
+<div class="main-section-data">
+<div class="row">
+<%- include('../partials/leftside'); -%>
+
+<div class="col-lg-6 col-md-8 no-pd">
+<div class="main-ws-sec">
+
+<div class="posts-section">
+<div class="post-bar">
+<div class="job_descp">
+
+<form role="form" action="/req_received" method="post">
+        
+            <div class="panel-heading"><center><h2>REQUESTS</h2></center>
+                
+            </div>
+           
+                    <table class="table table-striped table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th>id</th>
+                            	
+                            	<th>need</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <%= data.req_received %>
+                            <% if (data ){%>
+                                <% for(var i = 0; i < data.length; i++){%>
+                                <tr>
+                                    <td> <%= data[i].r_id%> </td>
+                                    
+                                    <td> <%= data[i].need%> </td>
+                                    
+                                </tr>
+                                <%}%>
+                            <%}%>
+                        </tbody>
+                    </table>
+                    </form>
+
+    </div>
+
+</div>
+
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</main>
+
+

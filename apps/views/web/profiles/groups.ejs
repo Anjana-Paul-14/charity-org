@@ -1,0 +1,75 @@
+<%- include('../partials/header'); -%>
+
+<main>
+<div class="main-section">
+<div class="container">
+<div class="main-section-data">
+<div class="row">
+<%- include('../partials/leftside'); -%>
+
+<div class="col-lg-6 col-md-8 no-pd">
+<div class="main-ws-sec">
+
+<div class="posts-section">
+<div class="post-bar">
+<div class="job_descp">
+
+
+<form role="form" action="/groups" method="post">
+        
+            <div class="panel-heading"><center><h2>GROUPS</h2></center>
+                
+            </div>
+           
+                    <table class="table table-striped table-bordered table-hover">
+                        <thead>
+                            <tr>
+                            	<th>GROUP NUMBER</th>
+    							<th>GROUP NAME</th>
+                               
+                                <th>GROUP code</th>
+                               
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% if (data && data.groups){%>
+                                <% for(var i = 0; i < data.groups.length; i++){%>
+                                <tr>
+                                    <td> <%= data.groups[i].gp_id%> </td>
+                                    <td> <%= data.groups[i].gp_name%> </td>
+                                    
+                                    <td> <%= data.groups[i].gp_code%> </td>   
+
+                                    
+                                </tr>
+                                <%}%>
+                            <%}%>
+                        </tbody>
+                    </table>
+                    </form>
+            
+
+
+    </div>
+
+</div>
+
+
+
+
+</div>
+</div>
+</div>
+<div class="col-lg-3 pd-right-none no-pd">
+<div class="right-sidebar">
+
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+

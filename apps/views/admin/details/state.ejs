@@ -1,0 +1,131 @@
+
+  <%- include('../layout/header') %>
+
+    <%- include('../layout/side') %>
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">General Form</li>
+            </ol>
+          </div>
+        </div>
+     
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <!-- left column -->
+          <div class="col-md-12">
+            <!-- general form elements -->
+            <div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">form</h3>
+              </div>
+              <!-- /.card-header -->
+              <!-- form start -->
+
+        
+        <form role="form" action="/admin/state" method="post">
+        <div class="panel panel-default">
+            <div class="panel-heading"><center><h2>STATE</h2></center>
+                
+            </div>
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered table-hover">
+                        <thead>
+                            <tr>
+                              
+                                
+                               
+                                <th>fname</th>
+                                <th>lname</th>
+                                <th>address</th>
+                                <th>pno</th>
+                                <th>email</th>
+                                <th>ward</th>
+                                <th>Panchayath</th>
+                                <th>Taluk</th>
+                                <th>district</th>
+                                
+                               
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% if (data && data.state){%>
+                                <% for(var i = 0; i < data.state.length; i++){%>
+                                <tr>
+                                    
+                                    <td> <%= data.state[i].first_name%> </td>
+                                   
+                                    <td> <%= data.state[i].last_name%> </td>
+                                    
+                                    <td> <%= data.state[i].address%> </td>
+                                    <td> <%= data.state[i].pno%> </td>
+                                    <td> <%= data.state[i].email%> </td>
+                                    <td> <%= data.state[i].ward%> </td>
+                                    <td> <%= data.state[i].pan%> </td>
+                                    <td> <%= data.state[i].taluk%> </td>
+                                    <td> <%= data.state[i]. dis%> </td>
+                                    <td>
+                                       
+                                        
+                                    
+                                </tr>
+                                <%}%>
+                            <%}%>
+                        </tbody>
+                    </table>
+                    <INPUT TYPE="button" VALUE="Back" onClick="history.back()" a href="admin/index" >
+                </div>
+                <!-- /.table-responsive -->
+            </div>
+            <!-- /.panel-body -->
+        </div>
+    </div>
+
+ </div>
+            <!-- /.card -->
+
+            <!-- Form Element sizes -->
+            
+            <!-- /.card -->
+
+            
+            <!-- /.card -->
+
+            <!-- Input addon -->
+       
+            <!-- /.card -->
+            <!-- Horizontal Form -->
+          
+            <!-- /.card -->
+
+          </div>
+          <!--/.col (left) -->
+          <!-- right column -->
+         
+          <!--/.col (right) -->
+        </div>
+        <!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+
+   </div><!-- /.container-fluid -->
+    </section>
+
+
+  <%- include('../layout/footer') %>

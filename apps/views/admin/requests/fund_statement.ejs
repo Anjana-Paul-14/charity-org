@@ -1,0 +1,110 @@
+ <%- include('../layout/header') %>
+
+  
+  <%- include('../layout/side') %>
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="/admin/index">Home</a></li>
+              <li class="breadcrumb-item active">General Form</li>
+            </ol>
+          </div>
+        </div>
+     
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <!-- left column -->
+          <div class="col-md-12">
+            <!-- general form elements -->
+            <div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">Fund Statement</h3>
+              </div>
+              <!-- /.card-header -->
+              <!-- form start -->
+
+        <div class="panel panel-default">
+           
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered table-hover">
+                        <thead>
+                            <tr>
+                            	  
+    							              <th>NAME</th>
+                                <th>DATE</th>
+                                <th>AMOUNT</th>
+                                
+                               
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% if (data && data.request){%>
+                                <% for(var i = 0; i < data.request.length; i++){%>
+                                <tr>
+                                    <td> <%= data.request[i].first_name %> </td>
+                                    <td> <%= data.request[i].deposit_date %> </td>
+                                    <td> <%= data.request[i].amount%> </td>
+                                    
+                            
+                                </tr>
+                                <%}%>
+                            <%}%>
+                        </tbody>
+                    </table>
+                    <INPUT TYPE="button" VALUE="Back" onClick="history.back()" a href="admin/index" >
+                   
+                </div>
+                <!-- /.table-responsive -->
+            </div>
+            <!-- /.panel-body -->
+        </div>
+    </div>
+
+
+
+      </div>
+            <!-- /.card -->
+
+            <!-- Form Element sizes -->
+            
+            <!-- /.card -->
+
+            
+            <!-- /.card -->
+
+            <!-- Input addon -->
+       
+            <!-- /.card -->
+            <!-- Horizontal Form -->
+          
+            <!-- /.card -->
+
+          </div>
+          <!--/.col (left) -->
+          <!-- right column -->
+         
+          <!--/.col (right) -->
+        </div>
+        <!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+
+   </div><!-- /.container-fluid -->
+    </section>
+
+<%- include('../layout/footer') %>
